@@ -19,3 +19,5 @@ Lora:
 ```
 ### `sudo orangepi-config` > `System` > `Hardware`
 ![ONLY spi1-cs0-spidev enabled](/images/opiz2w_hardware_config.png)
+
+https://github.com/madeofstown/meshtasticd-orangepi_zero2w/blob/58cd0d186f6b34446d6322241a95fbac796a7aa1/opijammy-prep.sh#L1C1-L17C29
