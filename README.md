@@ -18,3 +18,4 @@ Lora:
   spidev: spidev1.0
 ```
 ### `sudo orangepi-config` > `System` > `Hardware`
+![ONLY spi1-cs0-spidev enabled](/images/opiz2w_hardware_config.png)
