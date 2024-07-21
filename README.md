@@ -219,4 +219,22 @@ Environment    Status    Duration
 native         FAILED    00:10:29.666
 ===================================== 1 failed, 0 succeeded in 00:10:29.666 =====================================
 ```
+> [!IMPORTANT]
+>![discord_pkg-config_depend](https://github.com/user-attachments/assets/b549625d-ff89-4709-a736-2a0f5db71f0c)
 
+`sudo apt install pkg-config`
+```
+. ~/.platformio/penv/bin/activate
+./bin/build-native.sh
+```
+SUCCESS 🥳
+
+`deactivate && sudo ./bin/native-install.sh`
+
+`sudo meshtasticd`
+
+## DOUBLE SUCCESS 🎉🎊🎈🥳
+
+`sudo systemctl enable meshtasticd && sudo reboot now`
+
+`journalctl -u meshtasticd -f`
