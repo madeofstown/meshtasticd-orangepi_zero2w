@@ -1,4 +1,3 @@
-VERSION=v2.4.0.46d7b82-test
 sudo apt update && sudo apt upgrade
 sudo apt install libgpiod-dev libyaml-cpp-dev libbluetooth-dev openssl libssl-dev libulfius-dev liborcania-dev python3.10-venv git
 wget -O get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py
@@ -11,7 +10,9 @@ mkdir ~/meshtastic-source
 cd ~/meshtastic-source
 git clone https://github.com/meshtastic/firmware.git
 cd firmware/
-git checkout $VERSION
+git fetch --tags
+latestTag=$(git describe --tags "$(git rev-list --tags --max-count=1)")
+git checkout $latestTag
 . ~/.platformio/penv/bin/activate
 sudo ./bin/build-native.sh
 sudo ./bin/native-install.sh
