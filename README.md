@@ -23,5 +23,31 @@ Lora:
 https://github.com/madeofstown/meshtasticd-orangepi_zero2w/blob/2e161e4f61c47c15ec1d5d1e89f605704519e3fc/opijammy-prep.sh#L1-L18
 
 #DUMP
-Armbian Debian 6.6.28 http://xogium.performanceservers.nl/archive/orangepizero2w/archive/Armbian_24.2.6_Orangepizero2w_bookworm_current_6.6.28_minimal.img.xz
+Armbian 24.2.6 Debian Bookworm Minimal (kernel6.6.28) http://xogium.performanceservers.nl/archive/orangepizero2w/archive/Armbian_24.2.6_Orangepizero2w_bookworm_current_6.6.28_minimal.img.xz
 not working. seems to be missing dependencies. known missing are gcc and g++
+
+
+## Armbian 24.2.6 Ubuntu Jammy Minimal (kernel6.6.28) http://xogium.performanceservers.nl/archive/orangepizero2w/archive/Armbian_24.2.6_Orangepizero2w_jammy_current_6.6.28_minimal.img.xz
+
+sudo apt update && sudo apt install armbian-config && apt upgrade
+
+### install the latest meshtasticd .deb to hopefully pick up dependecies: libmicrohttpd12 liborcania2.2 libulfius2.7 libyaml-cpp0.7 libyder2.0  > ARORT INSTALL
+
+sudo apt install libmicrohttpd12 liborcania2.2 libulfius2.7 libyaml-cpp0.7 libyder2.0
+
+### install platformio
+
+```
+wget -O get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py
+python3 get-platformio.py
+```
+python3.10-venv is missing so install with `sudo apt install python3.10-venv` then run `python3 get-platformio.py` again
+
+install platformio shell commands
+
+```
+sudo mkdir -p /usr/local/bin
+sudo ln -s ~/.platformio/penv/bin/platformio /usr/local/bin/platformio
+sudo ln -s ~/.platformio/penv/bin/pio /usr/local/bin/pio
+sudo ln -s ~/.platformio/penv/bin/piodebuggdb /usr/local/bin/piodebuggdb
+```
