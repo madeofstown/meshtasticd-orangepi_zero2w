@@ -1,4 +1,4 @@
-VERSION=v2.4.0.46d7b82
+VERSION=v2.4.0.46d7b82-test
 sudo apt update && sudo apt upgrade
 sudo apt install libgpiod-dev libyaml-cpp-dev libbluetooth-dev openssl libssl-dev libulfius-dev liborcania-dev python3.10-venv git
 wget -O get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py
