@@ -1,5 +1,8 @@
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y libgpiod-dev libyaml-cpp-dev libbluetooth-dev openssl libssl-dev libulfius-dev liborcania-dev python3.10-venv git
+sudo apt install -y wget python3 python3-pip python3-wheel python3-venv g++ zip git \
+                           ca-certificates libgpiod-dev libyaml-cpp-dev libbluetooth-dev \
+                           libusb-1.0-0-dev libulfius-dev liborcania-dev libssl-dev pkg-config && \
 wget -O get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py
 python3 get-platformio.py
 sudo mkdir -p /usr/local/bin
